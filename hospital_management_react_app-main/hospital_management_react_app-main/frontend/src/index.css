@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Advanced AI Chatbot Animations */
+@keyframes pulse-glow {
+    0%, 100% { 
+        box-shadow: 0 0 5px rgba(59, 130, 246, 0.5); 
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(139, 92, 246, 0.6); 
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+}
+
+.ai-active {
+    animation: pulse-glow 2s infinite;
+}
+
+.ai-thinking {
+    background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+    background-size: 200px 100%;
+    animation: shimmer 2s infinite linear;
+}
+
+.message-ai {
+    position: relative;
+    overflow: hidden;
+}
+
+.message-ai::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transform: translateX(-100%);
+    animation: shimmer-slide 3s infinite;
+}
+
+@keyframes shimmer-slide {
+    100% { transform: translateX(100%); }
+}
+
+/* Advanced scrollbar for chatbot */
+.chatbot-advanced::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbot-advanced::-webkit-scrollbar-track {
+    background: linear-gradient(180deg, #111827, #1f2937);
+    border-radius: 4px;
+}
+
+.chatbot-advanced::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+}
+
+.chatbot-advanced::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #2563eb, #7c3aed);
+}
+
+/* Gradient text effects */
+.gradient-text {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #10b981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Alert animations */
+.alert-pulse {
+    animation: alert-pulse 2s infinite;
+}
+
+@keyframes alert-pulse {
+    0%, 100% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+    50% { 
+        opacity: 0.7; 
+        transform: scale(1.1);
+    }
+}
+
+.emergency-glow {
+    animation: emergency-glow 1s infinite alternate;
+}
+
+@keyframes emergency-glow {
+    from { 
+        box-shadow: 0 0 5px #ef4444, 0 0 10px #ef4444; 
+    }
+    to { 
+        box-shadow: 0 0 10px #ef4444, 0 0 20px #ef4444, 0 0 30px #ef4444; 
+    }
+}
+
+/* Data visualization animations */
+.bar-grow {
+    animation: bar-grow 1s ease-out;
+}
+
+@keyframes bar-grow {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+.chart-fade-in {
+    animation: chart-fade-in 1.5s ease-out;
+}
+
+@keyframes chart-fade-in {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* AI processing animation */
+.ai-processing {
+    position: relative;
+}
+
+.ai-processing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    animation: processing-line 2s infinite linear;
+}
+
+@keyframes processing-line {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
